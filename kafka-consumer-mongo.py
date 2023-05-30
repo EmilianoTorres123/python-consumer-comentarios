@@ -8,8 +8,7 @@ from pymongo.server_api import ServerApi
 
 import json
 
-uri = "mongodb+srv://jona2708:Jonathan2708@bdnosql.p8tt50o.mongodb.net/?retryWrites=true&w=majority"
-
+uri = "mongodb+srv://leiferTorres:h7D7B1EhlJQxgub7@cluster0.07nwh.mongodb.net/dbapi?retryWrites=true&w=majority"
 # Create a new client and connect to the server
 # client = MongoClient(uri, server_api=ServerApi('1'))
 # Send a ping to confirm a successful connection
@@ -34,7 +33,7 @@ except Exception as e:
 
 
 consumer = KafkaConsumer('comments', bootstrap_servers=[
-'my-kafka-0.my-kafka-headless.jona27081.svc.cluster.local:9092'])
+'my-kafka-0.my-kafka-headless.emilianotorres123.svc.cluster.local:9092'])
 # Parse received data from Kafka
 for msg in consumer:
     record = json.loads(msg.value)
